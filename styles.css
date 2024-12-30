@@ -1,26 +1,44 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background: url('https://www.toptal.com/designers/subtlepatterns/patterns/dotted-pattern.png');
     color: #333;
 }
 
+h1, h2, h3 {
+    margin: 0.5rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: #0073e6;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
 header {
-    background: #0073e6;
+    background: linear-gradient(135deg, #0073e6, #00c6ff);
     color: #fff;
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
+    font-size: 2rem;
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
+    margin: 0.5rem 0;
 }
 
 header nav ul li {
@@ -28,22 +46,82 @@ header nav ul li {
     margin: 0 10px;
 }
 
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: linear-gradient(135deg, #00c6ff, #0073e6);
+    color: white;
+    padding: 3rem 1rem;
 }
 
-main {
-    padding: 2rem;
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-main section {
-    margin-bottom: 2rem;
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
+.hero .cta {
+    display: inline-block;
+    background: white;
+    color: #0073e6;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.hero .cta:hover {
+    background: #f0f0f0;
+}
+
+/* Projects Section */
+.projects {
+    padding: 2rem 0;
+}
+
+.projects ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.projects li {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    flex: 1 1 calc(33% - 1rem);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem 0;
     background: #333;
     color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects ul {
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
 }
