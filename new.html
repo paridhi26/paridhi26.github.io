@@ -3,210 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paridhi Goel - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #f8f8f8;
-            --text-color: #333;
-            --accent-color: #4a4a4a;
-            --hover-color: #000;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        header {
-            margin-bottom: 4rem;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: flex-end;
-            list-style-type: none;
-        }
-
-        nav ul li {
-            margin-left: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--accent-color);
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--hover-color);
-        }
-
-        h1, h2, h3 {
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            font-weight: 600;
-        }
-
-        h2 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-top: 3rem;
-        }
-
-        h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        section {
-            margin-bottom: 4rem;
-        }
-
-        #hero {
-            text-align: center;
-            margin-bottom: 6rem;
-        }
-
-        #hero p {
-            font-size: 1.2rem;
-            color: var(--accent-color);
-        }
-
-        #projects ul {
-            list-style-type: none;
-        }
-
-        #projects li {
-            margin-bottom: 2rem;
-        }
-
-        #contact ul {
-            list-style-type: none;
-            display: flex;
-            gap: 1rem;
-        }
-
-        #contact a {
-            text-decoration: none;
-            color: var(--accent-color);
-            transition: color 0.3s ease;
-        }
-
-        #contact a:hover {
-            color: var(--hover-color);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 4rem;
-            color: var(--accent-color);
-            font-size: 0.9rem;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 1rem;
-            }
-
-            nav ul {
-                justify-content: center;
-            }
-
-            nav ul li {
-                margin: 0 1rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
-
-            #hero {
-                margin-bottom: 4rem;
-            }
-
-            #contact ul {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+    <title>Paridhi Goel | CS Student & Innovator</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav-list">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <div class="hero">
+            <h1>Paridhi Goel</h1>
+            <h2>Computer Science Student & Social Impact Technologist</h2>
+        </div>
     </header>
 
     <main>
-        <section id="hero">
-            <h1>Paridhi Goel</h1>
-            <p>Aspiring product manager and software engineer</p>
+        <section id="about" class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <img src="images/paridhi.jpg" alt="Paridhi Goel" class="profile-img">
+                <div class="bio">
+                    <p>University of Toronto CS student passionate about building technology that drives social change. Currently exploring product management and sustainable tech solutions.</p>
+                    <div class="skills">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                            <li>Product Development</li>
+                            <li>UI/UX Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I'm a student at the University of Toronto, passionate about computer science, product management, and technology-driven solutions. I love working on projects that create impact.</p>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
+        <section id="projects" class="section">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
                     <h3>Gravitystor</h3>
-                    <p>A green energy storage startup I co-founded.</p>
-                </li>
-                <li>
-                    <h3>Menstruation Nation</h3>
-                    <p>A period-tracking app designed for youth.</p>
-                </li>
-                <li>
-                    <h3>Scriptorium</h3>
-                    <p>An online platform for writing and sharing code.</p>
-                </li>
-            </ul>
+                    <p>Green energy storage startup focusing on sustainable solutions</p>
+                    <a href="projects/gravitystor.html" class="btn">Learn More →</a>
+                </article>
+                <!-- Repeat similar structure for other projects -->
+            </div>
         </section>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <ul>
-                <li><a href="mailto:paridhi@example.com">Email</a></li>
-                <li><a href="https://github.com/username" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a></li>
-            </ul>
+        <section id="contact" class="section">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <p>Open for collaborations and opportunities!</p>
+                <div class="contact-links">
+                    <a href="mailto:yourrealemail@utoronto.ca" class="email-link">
+                        <i class="fas fa-envelope"></i> Email Me
+                    </a>
+                    <div class="social-links">
+                        <a href="[Your GitHub URL]"><i class="fab fa-github"></i></a>
+                        <a href="[Your LinkedIn URL]"><i class="fab fa-linkedin"></i></a>
+                        <a href="[Your Twitter URL]"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Paridhi Goel</p>
+    <footer class="footer">
+        <p>© 2024 Paridhi Goel. Pursuing Impact Through Technology</p>
     </footer>
 </body>
 </html>
